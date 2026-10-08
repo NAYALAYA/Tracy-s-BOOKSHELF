@@ -81,20 +81,11 @@ books = {
 color("#F2EDEB")
 penup()
 goto(-150, 200)
-pendown()
 
-for b, a in books.items():
-    yup = b + " by " + a
-    
-    write(yup, font = ("Courier", 14, "bold"))
-
-    y = 200
-    
-    y = y - 20
-
-    setposition(-150, y)
-
-
+for index, (name, author) in enumerate(books.items()):
+    penup()
+    sety(200 - (index * 40))
+    write(f"{name} by {author}", font = ("Courtier", 15, "bold"))
 
 #keeps the window open
 done()
