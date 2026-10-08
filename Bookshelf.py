@@ -80,10 +80,20 @@ books = {
 
 color("#F2EDEB")
 penup()
-goto(-170, 220)
+goto(-150, 200)
 pendown()
 
-write(books, font = ("Courier", 14, "bold"))
+for b, a in books.items():
+    yup = b + " by " + a
+    
+    write(yup, font = ("Courier", 14, "bold"))
+
+    y = 200
+    
+    y = y - 20
+
+    setposition(-150, y)
+
 
 
 #keeps the window open
