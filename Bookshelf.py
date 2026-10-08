@@ -6,7 +6,7 @@ from turtle import *
 
 shape("turtle")
 pensize(3)
-
+speed(15)
 
 print(pos())
 
@@ -51,12 +51,39 @@ end_fill()
 
 
 penup()
-goto(-248, 255)
+goto(-250, 255)
+forward(30)
+pensize(10)
+color("#231709")
+pendown()
 
-
-
+for i in range(2):
+    forward(500)
+    right(90)
+    forward(600)
+    right(90)
 
 # writing dictbooks
+
+books = {
+    "The Westing Game" : "Ellen Raskin",
+    "Doll Bones" : "Hobby Black",
+    "FNAF: Fazbear Frights #1: Into the Pit" : "Scott Cawthon",
+    "The Outsiders" : "S.E. Hinton",
+    "Of Mice and Men" : "John Steinbeck",
+    "Goosebumps" : "R.L. Stine",
+    "A Series of Unfortunate Events" : "Lemony Snicket",
+    "Solo" : "Kwame Alexander"
+}
+
+# show the books on the shelf
+
+color("#F2EDEB")
+penup()
+goto(-170, 220)
+pendown()
+
+write(books, font = ("Courier", 14, "bold"))
 
 
 #keeps the window open
