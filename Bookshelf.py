@@ -68,11 +68,11 @@ for i in range(2):
 books = {
     "The Westing Game" : "Ellen Raskin",
     "Doll Bones" : "Hobby Black",
-    "FNAF: Fazbear Frights #1: Into the Pit" : "Scott Cawthon",
+    "FNAF: #1: Into the Pit" : "Scott Cawthon",
     "The Outsiders" : "S.E. Hinton",
     "Of Mice and Men" : "John Steinbeck",
     "Goosebumps" : "R.L. Stine",
-    "A Series of Unfortunate Events" : "Lemony Snicket",
+    "Everything Everything" : "Nicola Yoon",
     "Solo" : "Kwame Alexander"
 }
 
@@ -84,7 +84,7 @@ goto(-150, 200)
 
 for index, (name, author) in enumerate(books.items()):
     penup()
-    sety(200 - (index * 40))
+    sety(200 - (index * 70))
     write(f"{name} by {author}", font = ("Courtier", 15, "bold"))
 
 #keeps the window open
